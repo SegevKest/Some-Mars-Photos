@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Photos- NASA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+
+    <style>
+    .marsPhoto{
+        width:200px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Mars Photos</h1>
+                        <p class="lead">Welcome to Mars Photos search API!</p>
+                        <hr class="my-4">
+                        <p>Feel free to use the form below to either search for a camera on mars, or show a
+                            generalized photos list</p>
+                    
+                            <p><label>Camera's List: </label>  FHAZ, RHAZ, MAST, CHEMCAM, MAHLI, MARDI, NAVCAM, PANCAM, MINITES </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-3">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Select Camera</h5>
+
+                            <form id="searchForm" class="form-inline" name="searchForm">
+                                <label class="sr-only" for="cName">Camera</label>
+                                <input type="text" class="form-control mb-2 mr-sm-2" id="cameraName" placeholder="Camera name..."
+                                    name="countryInput" required>
+                                <button id="getCamera" type="submit" class="btn btn-primary mb-2 mr-sm-2" name="searchSubmit">Search</button>
+                                <span class="mr-sm-2 mb-2">or...</span>
+                                <button id="getAll" type="button" class="btn btn-primary mb-2" name="getAll">Get ALL Photos
+                                    </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Results</h5>
+                            <div class="card-columns" id="photosList">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
